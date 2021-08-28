@@ -6,7 +6,7 @@
     <ul class="list-pictures">
       <li class="list-pictures-item" v-for="picture in pictureWithFilter" :key="picture.url">
         <panel :title="picture.titulo">
-          <img class="responsive-image" :src="picture.url" :alt="picture.title" />
+          <image-responsive :url="picture.url" :title="picture.titulo"/>
         </panel>
       </li>
     </ul>
@@ -15,10 +15,12 @@
 
 <script>
 import Panel from './components/shared/panel/Panel'
+import ImageResponsive from './components/shared/image-responsive/ImageResponsive'
 
 export default {
   components: {
-    panel: Panel
+    panel: Panel,
+    'image-responsive': ImageResponsive
   },
 
   computed: {
@@ -65,10 +67,6 @@ export default {
 
 .list-pictures .list-pictures-item {
   display: inline-block;
-}
-
-.responsive-image {
-  width: 100%;
 }
 
 .filter {
