@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://unibb.alura.com.br/
+HostUrl=https://s3.amazonaws.com/caelum-online-public/vue/api.zip
